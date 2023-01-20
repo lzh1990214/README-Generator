@@ -27,14 +27,29 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'List your collaborators, third-party assets, and tutorials with links to their GitHub profiles or primary websites:',
-        name: 'credit',
+        message: 'Provide any contribution guidelines if needed:',
+        name: 'contributing',
     },
     {
         type: 'list',
         message: 'Which license do you use?',
         name: 'license',
-        choices: ['MIT License', 'ISC License', 'Apache License 2.0', 'GNU General Public License v3.0', 'N/A']
+        choices: ['MIT License', 'ISC License', 'Apache License 2.0', 'N/A']
+    },
+    {
+        type: 'input',
+        message: 'Describe any tests that needed for this application',
+        name: 'tests',
+    },
+    {
+        type: 'input',
+        message: 'What is your GitHub name?',
+        name: 'githubName',
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'email',
     },
 ];
 
@@ -46,7 +61,6 @@ inquirer
         writeToFile('README.md', `${generateMarkdown(response)}`);
         }
     );
-
 
 
 // TODO: Create a function to write README file
