@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// A function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(response) {
   if (response.license === 'MIT License') {
@@ -12,7 +12,7 @@ function renderLicenseBadge(response) {
   };
 }
 
-// TODO: Create a function that returns the license link
+// A function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(response) {
   if (response.license === 'MIT License') {
@@ -26,14 +26,14 @@ function renderLicenseLink(response) {
   };
 }
 
-// TODO: Create a function that returns the license section of README
+// A function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(response) {
   return `## License <a id="License"></a>
   ### ${response.license}`;
 }
 
-// TODO: Create a function to generate markdown for README
+// A function to generate markdown for README
 function generateMarkdown(response) {
   return `
   ${renderLicenseBadge(response)} 
@@ -63,7 +63,6 @@ function generateMarkdown(response) {
   ### Email
   ${response.email}
 `;
-
 }
 
 module.exports = generateMarkdown;
